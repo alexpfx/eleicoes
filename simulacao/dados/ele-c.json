@@ -1,0 +1,59 @@
+{
+  "dg": "25/10/2026",
+  "hg": "19:50:22",
+  "f": "o",
+  "pl": [
+    {
+      "cd": "3220",
+      "c": "ele2026",
+      "dt": "05/10/2026",
+      "e": [
+        {
+          "tp": "8",
+          "abr": [
+            {
+              "cd": "br",
+              "cp": [
+                {
+                  "cd": "1",
+                  "ds": "Presidente",
+                  "tp": "1"
+                }
+              ]
+            }
+          ],
+          "cd": "6257",
+          "cdt2": "6258",
+          "t": "1",
+          "nm": "SIMULAÇÃO (1º turno real) - Eleição Ordinária Federal - 2026 1º Turno"
+        }
+      ]
+    },
+    {
+      "cd": "3221",
+      "c": "ele2026",
+      "dt": "25/10/2026",
+      "e": [
+        {
+          "tp": "8",
+          "abr": [
+            {
+              "cd": "br",
+              "cp": [
+                {
+                  "cd": "1",
+                  "ds": "Presidente",
+                  "tp": "1"
+                }
+              ]
+            }
+          ],
+          "cd": "6258",
+          "cdt2": "",
+          "t": "2",
+          "nm": "SIMULAÇÃO (dados fictícios) - Eleição Ordinária Federal - 2026 2º Turno"
+        }
+      ]
+    }
+  ]
+}

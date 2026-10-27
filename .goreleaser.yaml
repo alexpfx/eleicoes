@@ -1,0 +1,42 @@
+# Executáveis para Linux, macOS e Windows e o Release no GitHub, a cada tag v* enviada
+# (ver .github/workflows/release.yml). Para testar sem publicar: make dist (os arquivos ficam em dist/).
+version: 2
+
+project_name: eleicoes
+
+builds:
+  - main: .
+    binary: eleicoes
+    env:
+      - CGO_ENABLED=0
+    goos: [linux, darwin, windows]
+    goarch: [amd64, arm64]
+    flags:
+      - -trimpath
+    ldflags:
+      - -s -w -X main.versao=v{{ .Version }}
+
+archives:
+  - formats: [tar.gz]
+    format_overrides:
+      - goos: windows
+        formats: [zip]
+    # "macos" no lugar de "darwin", para quem baixa reconhecer o arquivo.
+    name_template: >-
+      {{ .ProjectName }}_{{ .Version }}_{{ if eq .Os "darwin" }}macos{{ else }}{{ .Os }}{{ end }}_{{ .Arch }}
+    files:
+      - README.md
+      - LICENSE
+
+checksum:
+  name_template: checksums.txt
+
+changelog:
+  sort: asc
+
+release:
+  github:
+    owner: alexpfx
+    name: eleicoes
+  # Tags como v1.0.0-rc.1 saem como pré-lançamento, para testar sem virar a versão mais recente.
+  prerelease: auto

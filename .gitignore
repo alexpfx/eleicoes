@@ -1,0 +1,16 @@
+# Binários
+/eleicoes
+/eleicoes.exe
+/dist/
+
+# Gerados pelo programa (teclas f e e)
+fotos/
+tabelas/
+
+# Arquivos do TSE baixados por "make bairros" (~600 MB). Os JSON de dados/bairros ficam no
+# repositório: são embutidos no programa na compilação.
+dados/cache/
+
+# Python da simulação
+venv/
+__pycache__/
